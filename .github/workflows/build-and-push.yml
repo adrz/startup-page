@@ -7,7 +7,7 @@ on:
 
 jobs:
   docker:
-    runs-on: [self-hosted, linux, ubuntu-latest]
+    runs-on: [ubuntu-latest, self-hosted]
     steps:
       -
         name: Set up QEMU
