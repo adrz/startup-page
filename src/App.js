@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <p>
-        <h1>Hello</h1>
+        <h1>Hello there</h1>
         <p>it&apos;s {date.toLocaleTimeString()}</p>
       </p>
       <p>
