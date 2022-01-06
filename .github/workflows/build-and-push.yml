@@ -36,7 +36,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          dockerfile: Dockerfile-builder
+          file: ./Dockerfile-builder
           push: true
           tags: adrz/react-builder:${{ steps.get_version.outputs.VERSION }}
 
