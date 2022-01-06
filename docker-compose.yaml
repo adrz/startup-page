@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+  nginx:
+    image: nginx:stable-alpine
+    container_name: nginx-app
+    ports:
+      - '8080:80'
+    volumes:
+       - ./data-build:/usr/share/nginx/html
+  builder:
+    build:
+      context: ./
+      dockerfile: Dockerfile-builder
+    environment:
+      - GITHUB_REPO=https://github.com/adrz/startup-page
+      - POLL_INTERVAL=30
+    volumes:
+      - ./data-build:/app/build

@@ -1,0 +1,6 @@
+FROM node:17.3.0 as build
+WORKDIR /app
+COPY entrypoint-builder.sh ./
+COPY build.sh ./
+ENV GITHUB_REPO https://github.com/adrz/startup-page
+CMD ["./entrypoint-builder.sh"]
